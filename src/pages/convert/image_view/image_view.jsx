@@ -23,11 +23,11 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
 
 
     useEffect(() => {
-        let colorPalettePath = "../src/color_palettes/2724.csv";
+        let colorPalettePath = "/color_palettes/2724.csv";
         if (1139 <= minecraftVersion && minecraftVersion <= 2225) {
-            colorPalettePath = "../src/color_palettes/1139.csv";
+            colorPalettePath = "/color_palettes/1139.csv";
         } else if (minecraftVersion === 2566) {
-            colorPalettePath = "../src/color_palettes/2566.csv";
+            colorPalettePath = "/color_palettes/2566.csv";
         }
 
         parseCSV(colorPalettePath)
