@@ -15,7 +15,7 @@ header#header div.title {
     /* background-image: linear-gradient(60deg, var(--color1-light), var(--color2-light));
     color: transparent;
     background-clip: text; */
-    color: #cf36bd;
+    color: var(--color-mix);
     font-size: 2em;
 }
 

@@ -44,9 +44,11 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
                 toType: "image/png",
                 quality: 1,
             })
-            .then(blob => setImageFile(new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
-                type: "image/png",
-            })));
+            .then(blob => {
+                const newImageFile = new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {type: "image/png"});
+                setImageFile(newImageFile);
+            });
+            return;
         }
 
         const reader = new FileReader();
