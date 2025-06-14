@@ -6,7 +6,7 @@ import "./parse.css";
 export default function ParsePage({}) {
 
     useEffect(() => {
-        document.title = `Mapart.me - Minecraft Map to Image Converter`
+        document.title = `Mapart.fun - Minecraft Map to Image Converter`
     }, []);
 
 

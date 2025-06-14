@@ -24,7 +24,7 @@ export default function ConvertPage({}) {
 
 
     useEffect(() => {
-        document.title = `Mapart.me - Convert Image to Minecraft Map Art`
+        document.title = `Mapart.fun - Convert Image to Minecraft Map Art`
     }, []);
 
 
