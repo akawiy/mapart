@@ -9,6 +9,7 @@ Developed on Vite/ReactJS from May 27th to June 14th of 2025. All processing run
 - [jszip](https://www.npmjs.com/package/jszip) for creating ZIP archives
 - [pako](https://www.npmjs.com/package/pako) for gzipping
 - [buffer](https://www.npmjs.com/package/buffer) for compatibility
+- [heic2any](https://www.npmjs.com/package/heic2any) for Apple HEIC images support
 
 # Developers/Credits/Thanks
 
