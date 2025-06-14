@@ -38,17 +38,15 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
     useEffect(() => {
         if (!imageFile) return;
 
-        if (imageFile.type === "image/heic" || imageFile.name.endsWith(".heic")) {
+        if (imageFile.type === "image/heic" || imageFile.name.toLowerCase().endsWith(".heic")) {
             heic2any({
                 blob: imageFile,
                 toType: "image/png",
                 quality: 1,
             })
-            .then(blob => {
-                const newImageFile = new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {type: "image/png"});
-                setImageFile(newImageFile);
-            });
-            return;
+            .then(blob => setImageFile(new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
+                type: "image/png",
+            })));
         }
 
         const reader = new FileReader();
