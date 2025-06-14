@@ -38,17 +38,6 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
     useEffect(() => {
         if (!imageFile) return;
 
-        if (imageFile.type === "image/heic" || imageFile.name.toLowerCase().endsWith(".heic")) {
-            heic2any({
-                blob: imageFile,
-                toType: "image/png",
-                quality: 1,
-            })
-            .then(blob => setImageFile(new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
-                type: "image/png",
-            })));
-        }
-
         const reader = new FileReader();
         const worker = new Worker(new URL("../../../utils/image_processing.js", import.meta.url), {type: "module"});
 
@@ -113,10 +102,22 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
     }, [imageFile, colorPalette, mapSize, scalingMode, dithering]);
 
 
-    const onFileUpload = event => {
+    const onFileUpload = async event => {
         const file = event.target.files[0];
         if (!file) return;
-        setImageFile(file);
+
+        if (file.type === "image/heic" || file.name.toLowerCase().endsWith(".heic")) {
+            heic2any({
+                blob: file,
+                toType: "image/png",
+                quality: 1,
+            })
+            .then(blob => setImageFile(new File([blob], file.name.toLowerCase().replace(/\.heic$/, ".png"), {
+                type: "image/png",
+            })));
+        } else {
+            setImageFile(file);
+        }
     }
 
 
