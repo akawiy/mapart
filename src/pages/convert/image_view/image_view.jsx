@@ -35,19 +35,18 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
     }, [minecraftVersion]);
 
 
-    useEffect(async () => {
+    useEffect(() => {
         if (!imageFile) return;
 
         if (imageFile.type === "image/heic" || imageFile.name.endsWith(".heic")) {
-            const blob = await heic2any({
+            heic2any({
                 blob: imageFile,
                 toType: "image/png",
                 quality: 1,
-            });
-
-            imageFile = new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
+            })
+            .then(blob => setImageFile(new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
                 type: "image/png",
-            });
+            })));
         }
 
         const reader = new FileReader();
