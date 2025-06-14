@@ -1,0 +1,24 @@
+section#scaling-mode div.options {
+    display: flex;
+    gap: .75em;
+}
+
+section#scaling-mode div.options div.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+section#scaling-mode div.options div.option img {
+    width: 5em;
+    height: 5em;
+}
+
+section#scaling-mode div.options div.option div.name {
+    text-transform: capitalize;
+    position: absolute;
+    bottom: .3em;
+}

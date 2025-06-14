@@ -1,0 +1,23 @@
+section#starting-map-id div.input-wrapper {
+    display: flex;
+    background: var(--bg2);
+    border-radius: .6em;
+    gap: .25em;
+    align-items: center;
+    font-size: 2em;
+    position: relative;
+    border: .1em solid var(--color-mix);
+}
+
+section#starting-map-id div.input-wrapper input {
+    background-color: var(--bg);
+    font-size: 1em;
+    width: 5em;
+    color: var(--text);
+    border-radius: .5em;
+    padding: .25em .4em;
+}
+
+section#starting-map-id div.input-wrapper div.last-map-id {
+    padding-right: .4em;
+}

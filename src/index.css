@@ -1,0 +1,23 @@
+* {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    appearance: none;
+}
+
+input[type=file] {
+    display: none;
+}

@@ -1,0 +1,18 @@
+div.progress-bar {
+    height: 1em;
+    background: var(--bg2);
+    border-radius: .5em;
+    position: relative;
+}
+
+div.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(var(--value) * (100% - 1em) + 1em);
+    background: linear-gradient(60deg, var(--color1), var(--color2));
+    border-radius: .5em;
+    transition: .2s width;
+}

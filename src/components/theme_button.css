@@ -1,0 +1,39 @@
+.theme-button {
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: .67em 1em;
+    border-radius: .5em;
+    background: linear-gradient(60deg, var(--color1), var(--color2));
+    border: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: inherit;
+    transition: --color1 .2s, --color2 .2s, box-shadow .2s;
+    color: var(--text);
+}
+.theme-button.disabled {
+    background: var(--bg2-hover);
+    cursor: not-allowed;
+}
+.theme-button:not(.disabled):hover {
+    transition: --color1 .2s, --color2 .2s, box-shadow .2s;
+    --color1: var(--color1-light);
+    --color2: var(--color2-light);
+    box-shadow: 0 0 .5em var(--color-mix);
+}
+.theme-button:not(.disabled):active {
+    transition: --color1 .2s, --color2 .2s, box-shadow .2s;
+    --color1: var(--color1-dark);
+    --color2: var(--color2-dark);
+    box-shadow: none;
+}
+
+.theme-button svg {
+    width: .5em;
+    margin-left: .5em;
+    fill: var(--text);
+}
