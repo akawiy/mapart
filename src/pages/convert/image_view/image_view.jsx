@@ -3,6 +3,7 @@ import {parseCSV} from "../../../utils/csv";
 import {Buffer} from "buffer";
 import {encode, Byte, Short, Int} from "nbt-ts";
 import {gzip} from "pako";
+import heic2any from "heic2any";
 import JSZip from "jszip";
 import UploadIcon from "../../../components/icons/upload";
 import DownloadIcon from "../../../components/icons/download";
@@ -34,8 +35,20 @@ export default function ImageView({imageFile, setImageFile, setImageFileSize, sh
     }, [minecraftVersion]);
 
 
-    useEffect(() => {
+    useEffect(async () => {
         if (!imageFile) return;
+
+        if (imageFile.type === "image/heic" || imageFile.name.endsWith(".heic")) {
+            const blob = await heic2any({
+                blob: imageFile,
+                toType: "image/png",
+                quality: 1,
+            });
+
+            imageFile = new File([blob], imageFile.name.replace(/\.heic$/, ".png"), {
+                type: "image/png",
+            });
+        }
 
         const reader = new FileReader();
         const worker = new Worker(new URL("../../../utils/image_processing.js", import.meta.url), {type: "module"});
