@@ -1,6 +1,6 @@
-# Mapart.me
+# Mapart.fun
 
-Mapart.me is the ultimate tool for converting images into high-quality Minecraft Java Edition maps. With support for multiple Minecraft versions, map sizes up to 16×16, and powerful customization options like scaling modes and dithering, it gives you full creative control. Designed with a modern interface and a smooth user experience, Mapart.me makes it effortless to transform your favorite images into stunning in-game artwork-bringing beauty and personality to your Minecraft world.
+Mapart.fun is the ultimate tool for converting images into high-quality Minecraft Java Edition maps. With support for multiple Minecraft versions, map sizes up to 16×16, and powerful customization options like scaling modes and dithering, it gives you full creative control. Designed with a modern interface and a smooth user experience, Mapart.fun makes it effortless to transform your favorite images into stunning in-game artwork-bringing beauty and personality to your Minecraft world.
 
 # Version 1.0.0
 
