@@ -39,15 +39,15 @@ export default function MapSize({imageFileSize, showGrid, setShowGrid, mapSize, 
             const width = Math.round(aspectRatio * height);
             if (width > 16 || height > 16) {
                 break;
-            }
+            } else if (width !== 0) {
+                const lastSize = sizes[sizes.length - 1];
+                if (lastSize.width != width || lastSize.height != height) {
+                    sizes.push({width, height});
+                }
 
-            const lastSize = sizes[sizes.length - 1];
-            if (lastSize.width != width || lastSize.height != height) {
-                sizes.push({width, height});
-            }
-
-            if (sizes.length == 8) {
-                break;
+                if (sizes.length == 8) {
+                    break;
+                }
             }
 
             height++;

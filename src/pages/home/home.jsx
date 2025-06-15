@@ -22,7 +22,7 @@ export default function HomePage({}) {
             <ConvertSection />
             <ParseSection />
             <footer id="footer">
-                <div className="info">Mapart.fun • 2025 • v1.0.0</div>
+                <div className="info">Mapart.fun • 2025 • v1.0.1</div>
             </footer>
         </div>
     );
