@@ -1,0 +1,81 @@
+div#convert-page {
+    overflow-x: hidden;
+}
+
+div#convert-page .card {
+    background-color: var(--bg2);
+    border-radius: .75em;
+    transition: background-color .1s, box-shadow .1s;
+    cursor: pointer;
+    position: relative;
+    width: 9em;
+    height: 9em;
+    border: .2em solid transparent;
+}
+div#convert-page .card.active {
+    border: .2em solid var(--color-mix);
+    cursor: default;
+}
+div#convert-page .card:hover:not(.active) {
+    background-color: var(--bg2-hover);
+    transition: background-color .1s, box-shadow .1s;
+}
+div#convert-page .card:active:not(.active) {
+    background-color: var(--bg2-active);
+    transition: background-color .1s, box-shadow .1s;
+}
+
+div#convert-page div.settings {
+    width: 50%;
+    margin-left: 50vw;
+    min-height: 100vh;
+    border-left: 3px solid var(--bg2);
+    display: flex;
+    flex-direction: column;
+}
+
+div#convert-page section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 2em;
+}
+div#convert-page section:not(:last-child) {
+    border-bottom: 3px solid var(--bg2);
+}
+
+div#convert-page section div.section-title {
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 0;
+    line-height: 1em;
+    text-align: center;
+}
+
+
+@media (max-width: 1700px) {
+
+    div#convert-page div.settings {
+        font-size: 1.2vw;
+    }
+
+}
+
+@media (max-width: 100vh) {
+
+    div#convert-page div.settings {
+        margin-left: 0;
+        margin-top: 40vh;
+        width: 100%;
+        height: 50%;
+        border-left: none;
+        min-height: unset;
+    }
+
+    div#convert-page div.settings {
+        font-size: 2.4vw;
+    }
+
+}

@@ -1,0 +1,24 @@
+section#dithering div.options {
+    display: flex;
+    gap: .75em;
+}
+
+section#dithering div.options div.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+section#dithering div.options div.option:nth-child(2) {
+    background-image: url("../../../assets/grid.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-clip: content-box;
+    image-rendering: pixelated;
+}
+
+section#dithering div.options div.option div.name {
+    text-transform: capitalize;
+}

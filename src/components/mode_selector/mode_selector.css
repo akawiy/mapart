@@ -1,0 +1,28 @@
+div.mode-selector {
+    display: flex;
+    padding: .5em;
+    background-color: var(--bg2);
+    gap: .5em;
+    border-radius: 10em;
+    align-items: center;
+}
+
+div.mode-selector div.mode {
+    padding: .5em 1em;
+    border-radius: 10em;
+    cursor: pointer;
+    transition: background-color .1s;
+    text-transform: capitalize;
+}
+div.mode-selector div.mode:not(.active):hover {
+    background-color: var(--bg2-hover);
+    transition: background-color .1s;
+}
+div.mode-selector div.mode:not(.active):active {
+    background-color: var(--bg2-active);
+    transition: background-color .1s;
+}
+div.mode-selector div.mode.active {
+    background: linear-gradient(60deg, var(--color1), var(--color2));
+    cursor: default;
+}

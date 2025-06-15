@@ -1,0 +1,85 @@
+section#convert {
+    height: min(80vh, 50vw);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+section#convert div.left,
+section#convert div.right {
+    height: 100%;
+}
+
+section#convert div.left {
+    width: min(80vh, 100vw);
+    display: flex;
+    padding: 2em;
+    padding-right: 0;
+    gap: 2em;
+    flex-direction: row;
+}
+
+section#convert div.image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border: .25em solid var(--text);
+}
+
+section#convert div.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    flex-grow: 1;
+    width: fit-content;
+    height: fit-content;
+    
+    flex-shrink: 0;
+    padding: 2em;
+}
+
+section#convert div.right div.message {
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: 0;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+
+@media (max-width: 1300px) {
+
+    section#convert {
+        font-size: .8em;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    section#convert {
+        flex-direction: column-reverse;
+        height: calc(min(80vh, 100vw) + 15em);
+        font-size: min(1em, 2.5vw, 3vh);
+    }
+
+    section#convert div.right {
+        position: absolute;
+        top: 2em;
+        right: auto;
+        padding: 3em;
+        background-color: color-mix(in srgb, var(--bg) 50%, transparent 50%);
+        backdrop-filter: blur(1em);
+        border-radius: 2.5em;
+    }
+
+    section#convert div.left {
+        width: 100%;
+        margin-top: 15em;
+        padding: 2em;
+    }
+
+}
