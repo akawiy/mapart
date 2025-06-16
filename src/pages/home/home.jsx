@@ -1,7 +1,6 @@
 import {useEffect} from "react";
 import ConvertSection from "./convert_section/convert_section";
 import ParseSection from "./parse_section/parse_section";
-import logo from "../../assets/logo.png";
 
 import "./home.css";
 
@@ -16,7 +15,7 @@ export default function HomePage({}) {
     return (
         <div id="home-page">
             <header id="header">
-                <img src={logo} />
+                <img src="/logo.png" />
                 <div className="title">Mapart.fun</div>
             </header>
             <ConvertSection />
