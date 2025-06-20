@@ -4,7 +4,7 @@
 
 import {useEffect} from "react";
 import {BrowserRouter, Routes, Route} from "react-router";
-import {Analytics} from "@vercel/analytics/next";
+import {Analytics} from "@vercel/analytics/react";
 import HomePage from "./pages/home/home";
 import ConvertPage from "./pages/convert/convert";
 // import ParsePage from "./pages/parse/parse";
