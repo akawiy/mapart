@@ -4,6 +4,7 @@
 
 import {useEffect} from "react";
 import {BrowserRouter, Routes, Route} from "react-router";
+import {Analytics} from "@vercel/analytics/next";
 import HomePage from "./pages/home/home";
 import ConvertPage from "./pages/convert/convert";
 // import ParsePage from "./pages/parse/parse";
@@ -19,13 +20,16 @@ export default function App() {
 
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/convert" element={<ConvertPage />} />
-                {/* <Route path="/parse" element={<ParsePage />} /> */}
-            </Routes>
-        </BrowserRouter>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/convert" element={<ConvertPage />} />
+                    {/* <Route path="/parse" element={<ParsePage />} /> */}
+                </Routes>
+            </BrowserRouter>
+            <Analytics />
+        </>
     );
 
 }
