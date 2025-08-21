@@ -1,33 +1,21 @@
-@property --color1 {
-    syntax: "<color>";
-    initial-value: #dd368f;
-    inherits: false;
-}
-
-@property --color2 {
-    syntax: "<color>";
-    initial-value: #c036ea;
-    inherits: false;
-}
-
 :root {
-    --bg: #1e2128;
-    --text: #fff;
+    /* --bg: #1e2128; */
+    --bg: hsl(240deg, 10%, 15%);
+    --fg: hsl(240deg, 10%, 95%);
+    --fg2: hsl(240deg, 10%, 70%);
     --link: #7c6aff;
-    --bg2: color-mix(in srgb, var(--text) 10%, transparent 90%);
-    --bg2-solid: color-mix(in srgb, var(--text) 10%, var(--bg) 90%);
-    --bg2-hover: color-mix(in srgb, var(--text) 15%, transparent 85%);
-    --bg2-active: color-mix(in srgb, var(--text) 20%, transparent 80%);
-    --color-mix: color-mix(in srgb, var(--color1) 50%, var(--color2) 50%);
-    --color1-light: color-mix(in srgb, var(--color1), #fff 25%);
-    --color2-light: color-mix(in srgb, var(--color2), #fff 25%);
-    --color1-dark: color-mix(in srgb, var(--color1), #000 25%);
-    --color2-dark: color-mix(in srgb, var(--color2), #000 25%);
+    --bg2: color-mix(in srgb, var(--fg) 10%, transparent 90%);
+    --bg2-solid: color-mix(in srgb, var(--fg) 10%, var(--bg) 90%);
+    --bg2-hover: color-mix(in srgb, var(--fg) 15%, transparent 85%);
+    --bg2-active: color-mix(in srgb, var(--fg) 20%, transparent 80%);
+    --accent: #dd368f;
+    --accent-light: color-mix(in srgb, var(--accent), #fff 25%);
+    --accent-dark: color-mix(in srgb, var(--accent), #000 25%);
 }
 
 div#root {
     font-family: Verdana;
-    color: #fff;
+    color: var(--fg);
     background-color: var(--bg);
     min-height: 100vh;
     position: relative;

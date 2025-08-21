@@ -23,6 +23,6 @@ div.mode-selector div.mode:not(.active):active {
     transition: background-color .1s;
 }
 div.mode-selector div.mode.active {
-    background: linear-gradient(60deg, var(--color1), var(--color2));
+    background-color: var(--accent);
     cursor: default;
 }

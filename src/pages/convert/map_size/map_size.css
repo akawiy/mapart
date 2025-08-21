@@ -31,14 +31,14 @@ section#map-size div.custom {
     align-items: center;
     font-size: 2em;
     position: relative;
-    border: .1em solid var(--color-mix);
+    border: .1em solid var(--accent);
 }
 
 section#map-size div.custom input {
     background-color: var(--bg);
     font-size: 1em;
     width: 3em;
-    color: var(--text);
+    color: var(--fg);
     border-radius: .5em;
     padding: .25em .4em;
 }
@@ -62,11 +62,9 @@ section#map-size div.show-grid:active {
     transition: background-color .1s;
 }
 section#map-size div.show-grid.active {
-    background: linear-gradient(60deg, var(--color1), var(--color2));
-    transition: --color1 .1s, --color2 .1s;
+    background-color: var(--accent);
+    transition: background-color .1s;
 }
 section#map-size div.show-grid.active:hover {
-    --color1: var(--color1-light);
-    --color2: var(--color2-light);
-    transition: --color1 .1s, --color2 .1s;
+    background-color: var(--accent-light);
 }

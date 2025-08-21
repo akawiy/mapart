@@ -1,5 +1,6 @@
 div#convert-page {
     overflow-x: hidden;
+    margin-top: 80px;
 }
 
 div#convert-page .card {
@@ -13,7 +14,7 @@ div#convert-page .card {
     border: .2em solid transparent;
 }
 div#convert-page .card.active {
-    border: .2em solid var(--color-mix);
+    border: .2em solid var(--accent);
     cursor: default;
 }
 div#convert-page .card:hover:not(.active) {

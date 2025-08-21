@@ -1,15 +1,18 @@
 div#image-view {
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    top: 80px;
+    left: 0;
     padding: 2em;
     flex-direction: column;
     background-color: var(--bg);
     z-index: 100;
     font-size: min(1.2vw, 2.4vh);
+    z-index: 50;
 }
 div#image-view:has(label.initial-upload) {
     padding: 0;
@@ -21,7 +24,7 @@ div#image-view div#canvas-container {
 }
 
 div#image-view div#canvas-container canvas#image-canvas {
-    border: .2em solid var(--text);
+    border: .2em solid var(--fg);
     image-rendering: pixelated;
     object-fit: contain;
 }
@@ -48,7 +51,7 @@ div#image-view div#generating-preview {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: .2em solid var(--text);
+    border: .2em solid var(--fg);
     width: min(25em, calc(25em * var(--aspect-ratio)));
     height: min(25em, calc(25em / var(--aspect-ratio)));
 }
@@ -57,7 +60,7 @@ div#image-view div#generating-preview div.loading {
     width: calc(min(var(--aspect-ratio), 1 / var(--aspect-ratio)) * 25em / 2);
     height: calc(min(var(--aspect-ratio), 1 / var(--aspect-ratio)) * 25em / 2);
     border-radius: 100%;
-    background: conic-gradient(transparent 0deg, var(--text) 359deg);
+    background: conic-gradient(transparent 0deg, var(--fg) 359deg);
     position: relative;
     animation: rotate 1s infinite linear;
 }
@@ -82,7 +85,7 @@ div#image-view div.icons .icon {
     font-size: 20px;
     background-color: var(--bg2);
     padding: .5em;
-    border-radius: 50%;
+    border-radius: 1em;
     cursor: pointer;
     transition: background-color .1s;
     width: 3em;
@@ -109,7 +112,7 @@ div#image-view div.icons .icon svg {
 }
 
 div#image-view div.icons .icon svg path {
-    stroke: var(--text);
+    stroke: var(--fg);
 }
 div#image-view div.icons .icon:disabled svg path {
     stroke: var(--bg2-active);
@@ -142,7 +145,7 @@ div#image-view label.initial-upload svg path {
     transition: stroke .3s;
 }
 div#image-view label.initial-upload:hover svg path {
-    stroke: var(--text);
+    stroke: var(--fg);
     transition: stroke .3s;
 }
 
@@ -152,7 +155,7 @@ div#image-view label.initial-upload div.text {
     transition: color .3s;
 }
 div#image-view label.initial-upload:hover div.text {
-    color: var(--text);
+    color: var(--fg);
     transition: color .3s;
 }
 

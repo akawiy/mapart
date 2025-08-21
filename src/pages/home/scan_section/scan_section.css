@@ -1,35 +1,35 @@
-section#parse {
+section#scan {
     height: min(80vh, 100vw);
     display: flex;
-    background-image: url("../../../assets/bermudsk_map.png");
+    background: url("../../../assets/bermudsk_map.png");
     background-size: cover;
     background-position: center;
     image-rendering: pixelated;
     overflow: hidden;
 }
 
-section#parse div.left {
+section#scan div.left {
     width: max(800px, 50%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section#parse div.left div.content {
+section#scan div.left div.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: color-mix(in srgb, var(--bg), transparent 50%);
-    backdrop-filter: blur(1em);
+    background-color: var(--bg);
+    /* backdrop-filter: blur(1em); */
     gap: 1em;
     border-radius: 2.5em;
     padding: 3em;
 }
 
-section#parse div.left div.content div.message {
+section#scan div.left div.content div.message {
     font-weight: 900;
-    font-size: 2.5em;
+    font-size: 2em;
     letter-spacing: 0;
     line-height: 1.2em;
     text-align: center;
@@ -38,7 +38,7 @@ section#parse div.left div.content div.message {
 
 @media (max-width: 1300px) {
 
-    section#parse div.left {
+    section#scan div.left {
         font-size: .8em;
     }
 
@@ -46,7 +46,7 @@ section#parse div.left div.content div.message {
 
 @media (max-width: 1000px) {
 
-    section#parse div.left {
+    section#scan div.left {
         width: 100%;
         font-size: min(1em, 2.5vw, 3vh);
     }
