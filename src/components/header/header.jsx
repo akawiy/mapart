@@ -17,7 +17,9 @@ export default function Header({}) {
     return <header id="header">
         <div className="left">
             <img src="/logo.svg" alt="Mapart.fun logo" />
-            <div className="title">Mapart.fun</div>
+            <div className="title-wrapper">
+                <div className="title">Mapart.fun</div>
+            </div>
         </div>
         <nav id="nav">
             {Object.keys(nav).map(route => <Link to={route} key={route} className={location.pathname === route ? "active" : ""}>{nav[route]}</Link>)}

@@ -15,18 +15,27 @@ header#header {
 
 header#header div.left {
     display: flex;
-    gap: 1em;
     align-items: center;
 }
 
 header#header div.left img {
     height: 2em;
+    opacity: 0;
+    animation: appear .5s ease-out forwards;
+}
+
+header#header div.left div.title-wrapper {
+    width: fit-content;
+    overflow-x: hidden;
+    padding-left: 1em;
 }
 
 header#header div.left div.title {
     color: var(--accent);
     font-size: 1.5em;
     font-weight: 600;
+    opacity: 0;
+    animation: title-appear .5s ease-out forwards;
 }
 
 header#header nav#nav {
@@ -41,7 +50,13 @@ header#header nav#nav a {
     border-radius: .5em;
     transition: .2s background-color, .2s color;
     text-transform: capitalize;
+    opacity: 0;
+    animation: appear .5s ease-out forwards;
 }
+header#header nav#nav a:nth-child(1) {animation-delay: 0.3s;}
+header#header nav#nav a:nth-child(2) {animation-delay: 0.4s;}
+header#header nav#nav a:nth-child(3) {animation-delay: 0.5s;}
+header#header nav#nav a:nth-child(4) {animation-delay: 0.6s;}
 
 header#header nav#nav a:hover {
     background-color: var(--bg);
@@ -61,6 +76,28 @@ header#header nav#nav a.active {
 
     header#header div.left div.title {
         display: none;
+    }
+
+}
+
+
+@keyframes appear {
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes title-appear {
+
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
     }
 
 }

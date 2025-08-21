@@ -13,9 +13,9 @@ export default function ConvertSection({}) {
     return (
         <section id="convert">
             <div className="left">
-                <button aria-label="Minecraft chessboard map art" className={`image`} style={{backgroundImage: `url(${chessboardMapart})`, transform: "rotateY(30deg)"}}></button>
-                <button aria-label="Minecraft Mona Lisa map art" className={`image active`} style={{backgroundImage: `url(${monaLisaMapart})`, zIndex: 50}}></button>
-                <button aria-label="Minecraft street pointers map art" className={`image`} style={{backgroundImage: `url(${pointersMapart})`, transform: "rotateY(-30deg)"}}></button>
+                <button aria-label="Minecraft chessboard map art" className={`image`} style={{backgroundImage: `url(${chessboardMapart})`}}></button>
+                <button aria-label="Minecraft Mona Lisa map art" className={`image active`} style={{backgroundImage: `url(${monaLisaMapart})`}}></button>
+                <button aria-label="Minecraft street pointers map art" className={`image`} style={{backgroundImage: `url(${pointersMapart})`}}></button>
             </div>
             <div className="right">
                 <div className="message">Add images<br />into your<br />minecraft world<br />in vanilla</div>
