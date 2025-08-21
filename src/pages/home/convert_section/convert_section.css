@@ -17,6 +17,7 @@ section#convert div.left {
     padding-right: 0;
     gap: 0;
     flex-direction: row;
+    perspective: 1000px;
 }
 
 section#convert button.image {
@@ -26,8 +27,13 @@ section#convert button.image {
     background-position: center;
     background-size: cover;
     scale: 0.8;
-    box-shadow: 0 0 50px #0008;
     transition: .2s scale;
+    border: .2em solid var(--fg);
+    border-radius: 1.5em;
+}
+
+section#convert button.image:nth-child(2) {
+    box-shadow: 0 0 10em #fff3;
 }
 
 section#convert button.image.active {

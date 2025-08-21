@@ -16,7 +16,7 @@ export default function Header({}) {
 
     return <header id="header">
         <div className="left">
-            <img src="/logo.png" />
+            <img src="/logo.svg" alt="Mapart.fun logo" />
             <div className="title">Mapart.fun</div>
         </div>
         <nav id="nav">

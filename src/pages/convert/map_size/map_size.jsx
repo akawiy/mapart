@@ -65,7 +65,7 @@ export default function MapSize({imageFileSize, showGrid, setShowGrid, mapSize, 
             <div {...{className}} key={index} onClick={() => setMapSize(size)}>
                 <div className="item-frames" style={{gridTemplateColumns: `repeat(${size.width}, 1fr)`}}>
                     {Array.from({length: size.width * size.height}).map((_, index2) => {
-                        return (<img src={itemFrame} style={{width: `${itemFrameSize}em`, height: `${itemFrameSize}em`}} key={index2}/>)
+                        return (<img src={itemFrame} alt="Minecraft item frame" style={{width: `${itemFrameSize}em`, height: `${itemFrameSize}em`}} key={index2}/>)
                     })}
                 </div>
                 <div className="size">{size.width}x{size.height}</div>

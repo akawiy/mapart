@@ -1,7 +1,7 @@
 section#scan {
     height: min(80vh, 100vw);
     display: flex;
-    background: url("../../../assets/bermudsk_map.png");
+    background-image: url("../../../assets/bermudsk_map.png");
     background-size: cover;
     background-position: center;
     image-rendering: pixelated;
