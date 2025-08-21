@@ -17,7 +17,7 @@ export default function HomePage({}) {
             <ConvertSection />
             <ScanSection />
             <footer id="footer">
-                <div className="info">&copy; 2025 Mapart.fun by <a href="https://www.plschq.com" target="_blank">Vladimir Polishchuk</a></div>
+                <div className="info">&copy; 2025 Mapart.fun</div>
             </footer>
         </div>
     );
