@@ -35,6 +35,10 @@ section#scan div.left div.content div.message {
     text-align: center;
 }
 
+section#scan div.left div.content button {
+    background-color: color-mix(in srgb, var(--accent) 50%, transparent 50%);
+}
+
 
 @media (max-width: 1300px) {
 

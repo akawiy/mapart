@@ -13,7 +13,7 @@ export default function ScanSection({}) {
                 <div className="content" aria-label="Minecraft high-quality city map">
                     <div className="message">Get perfect<br />high-resolution<br />scans of your<br />world maps</div>
                     {/* <Link to="/scan"> */}
-                        <button disabled className="theme-button try-it-out disabled">Coming soon</button>
+                        <button disabled className="theme-button try-it-out disabled">Coming this month</button>
                     {/* </Link> */}
                 </div>
             </div>
