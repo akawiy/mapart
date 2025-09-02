@@ -87,15 +87,14 @@ section#convert div.right div.message {
     section#convert {
         flex-direction: column;
         font-size: min(1em, 4vw, 3vh);
-        position: relative;
     }
 
     section#convert div.right {
         right: auto;
         padding: 3em;
         border-radius: 2.5em;
-        position: absolute;
         bottom: 0;
+        padding-top: 0;
     }
 
     section#convert div.left {
@@ -103,7 +102,6 @@ section#convert div.right div.message {
         padding: 2em;
         width: min(100vw, 50vh);
         height: min(100vw, 50vh);
-        margin-bottom: 30vh;
     }
 
 }
