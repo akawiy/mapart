@@ -10,6 +10,7 @@ export default function ScanSection({}) {
     return (
         <section id="scan" fetchPriority="high">
             <div className="left">
+                <div className="image"></div>
                 <div className="content" aria-label="Minecraft high-quality city map">
                     <div className="message">Get perfect<br />high-resolution<br />scans of your<br />world maps</div>
                     {/* <Link to="/scan"> */}

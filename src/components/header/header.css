@@ -32,7 +32,7 @@ header#header div.left div.title-wrapper {
 
 header#header div.left div.title {
     color: var(--accent);
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-weight: 600;
     opacity: 0;
     animation: title-appear .5s ease-out forwards;
@@ -47,7 +47,7 @@ header#header nav#nav {
 header#header nav#nav a {
     color: var(--fg2);
     padding: .5em 1em;
-    border-radius: .5em;
+    border-radius: .75em;
     transition: .2s background-color, .2s color;
     text-transform: capitalize;
     opacity: 0;

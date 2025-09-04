@@ -6,7 +6,7 @@
     align-items: center;
     width: fit-content;
     padding: .67em 1em;
-    border-radius: .5em;
+    border-radius: .75em;
     background: var(--accent);
     border: none;
     font-weight: 700;
