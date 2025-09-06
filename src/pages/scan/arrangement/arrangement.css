@@ -1,0 +1,30 @@
+section#arrangement div.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--width), 1fr);
+    gap: calc(3em / max(var(--width), var(--height)));
+}
+
+section#arrangement div.grid input {
+    width: calc(40vw / max(var(--width), var(--height)));
+    height: calc(40vw / max(var(--width), var(--height)));
+    background-color: var(--bg2);
+    color: var(--fg);
+    text-align: center;
+    font-size: calc(40vw / max(var(--width), var(--height)) / 3);
+    overflow-x: hidden;
+    border-radius: 10%;
+}
+section#arrangement div.grid input:focus {
+    border: .1em solid var(--accent);
+}
+
+
+@media (max-width: 100vh) {
+
+    section#arrangement div.grid input {
+        width: calc(80vw / max(var(--width), var(--height)));
+        height: calc(80vw / max(var(--width), var(--height)));
+        font-size: calc(80vw / max(var(--width), var(--height)) / 3);
+    }
+
+}

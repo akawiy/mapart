@@ -9,7 +9,7 @@ export default function Header({}) {
     const nav = {
         "/": "home",
         "/convert": "convert",
-        // "/scan": "scan",
+        "/scan": "scan",
         // "/about": "about",
     };
 

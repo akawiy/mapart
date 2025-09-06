@@ -1,0 +1,24 @@
+button.toggle-grid-button {
+    padding: .5em 1em;
+    border-radius: 10em;
+    background: var(--bg2);
+    cursor: pointer;
+    transition: background-color .1s;
+    color: var(--text);
+    font-size: 1em;
+}
+button.toggle-grid-button:hover {
+    background-color: var(--bg2-hover);
+    transition: background-color .1s;
+}
+button.toggle-grid-button:active {
+    background-color: var(--bg2-active);
+    transition: background-color .1s;
+}
+button.toggle-grid-button.active {
+    background-color: var(--accent);
+    transition: background-color .1s;
+}
+button.toggle-grid-button.active:hover {
+    background-color: var(--accent-light);
+}

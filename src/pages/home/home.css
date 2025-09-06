@@ -36,3 +36,11 @@ footer#footer a:hover {
     }
 
 }
+
+@media (max-width: 500px) {
+
+    div#home-page {
+        margin-top: 120px;
+    }
+
+}

@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react";
 
 
-export default function NumberInput({value, setValue, minValue, maxValue, defaultValue}) {
+export default function NumberInput({value, setValue, minValue, maxValue, defaultValue, insertDefaultValue=true}) {
 
-    const [inputValue, setInputValue] = useState(value);
+    const [inputValue, setInputValue] = useState(insertDefaultValue ? value : "");
 
 
     useEffect(() => {

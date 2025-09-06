@@ -8,7 +8,7 @@ import {Analytics} from "@vercel/analytics/react";
 import Header from "./components/header/header";
 import HomePage from "./pages/home/home";
 import ConvertPage from "./pages/convert/convert";
-// import ParsePage from "./pages/parse/parse";
+import ScanPage from "./pages/scan/scan";
 
 import "./App.css";
 
@@ -27,7 +27,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/convert" element={<ConvertPage />} />
-                    {/* <Route path="/parse" element={<ParsePage />} /> */}
+                    <Route path="/scan" element={<ScanPage />} />
                 </Routes>
             </BrowserRouter>
             <Analytics />

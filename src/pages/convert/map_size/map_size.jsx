@@ -1,7 +1,8 @@
 import {useState, useEffect} from "react";
 import itemFrame from "../../../assets/item_frame.png";
 import ModeSelector from "../../../components/mode_selector/mode_selector";
-import NumberInput from "../../../components/number_input";
+import CustomMapSize from "../../../components/custom_map_size/custom_map_size";
+import ToggleGridButton from "../../../components/toggle_grid_button/toggle_grid_button";
 
 import "./map_size.css";
 
@@ -78,23 +79,11 @@ export default function MapSize({imageFileSize, showGrid, setShowGrid, mapSize, 
         <section id="map-size">
             <div className="section-title">Map size</div>
             <ModeSelector {...{currentMode}} modes={["recommended", "custom"]} setCurrentMode={v => setCurrentMode(v)} />
-            {(currentMode == "recommended") ? <div className="recommended" style={{"--width": Math.min(recommendedSizes.length, 4)}}>
+            {currentMode == "recommended" && <div className="recommended" style={{"--width": Math.min(recommendedSizes.length, 4)}}>
                 {recommendedSizes.map(createOption)}
-            </div> : null}
-            {(currentMode == "custom") ? <div className="custom">
-                <NumberInput value={mapSize.width} 
-                             setValue={v => setMapSize({width: v, height: mapSize.height})}
-                             minValue={1}
-                             maxValue={16}
-                             defaultValue={1} />
-                ×
-                <NumberInput value={mapSize.height}
-                             setValue={v => setMapSize({width: mapSize.width, height: v})}
-                             minValue={1}
-                             maxValue={16}
-                             defaultValue={1} />
-            </div> : null}
-            <div className={`show-grid${showGrid ? " active" : ""}`} onClick={() => setShowGrid(v => !v)}>Show grid: {showGrid ? "on" : "off"}</div>
+            </div>}
+            {currentMode == "custom" && <CustomMapSize {...{mapSize}} setMapSize={v => setMapSize(v)} />}
+            <ToggleGridButton {...{showGrid}} setShowGrid={v => setShowGrid(v)} />
         </section>
     );
 

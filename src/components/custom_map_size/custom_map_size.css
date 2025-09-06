@@ -1,0 +1,22 @@
+div.custom-map-size {
+    display: flex;
+    background: var(--bg2);
+    border-radius: .6em;
+    gap: .25em;
+    align-items: center;
+    font-size: 2em;
+    position: relative;
+    border: .1em solid var(--accent);
+}
+
+div.custom-map-size input {
+    background-color: var(--bg);
+    font-size: 1em;
+    width: 3em;
+    color: var(--fg);
+    border-radius: .5em;
+    padding: .25em .4em;
+}
+div.custom-map-size input:first-child {
+    text-align: right;
+}

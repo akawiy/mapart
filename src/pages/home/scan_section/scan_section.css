@@ -23,6 +23,7 @@ section#scan div.left div.content {
     border-radius: 2.5em;
     padding: 3em;
     z-index: 2;
+    position: relative;
 }
 
 section#scan div.left div.content div.message {
@@ -39,17 +40,24 @@ section#scan div.image {
     background-position: center;
     image-rendering: pixelated;
     position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     /* transform: translateY(-50%); */
     z-index: 0;
     /* border-radius: 2em; */
 }
 
-section#scan div.left div.content button {
-    background-color: color-mix(in srgb, var(--accent) 50%, transparent 50%);
+section#scan div.new {
+    position: absolute;
+    top: 1.5em;
+    left: .5em;
+    transform: rotate(-45deg);
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--accent);
+    animation: bounce 1s ease-in-out infinite;
 }
 
 
@@ -66,6 +74,22 @@ section#scan div.left div.content button {
     section#scan div.left {
         width: 100%;
         font-size: min(1em, 4vw, 3vh);
+    }
+
+}
+
+@keyframes bounce {
+
+    0% {
+        scale: 0.8;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0.8;
     }
 
 }

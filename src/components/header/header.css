@@ -81,6 +81,22 @@ header#header nav#nav a.active {
 }
 
 
+@media (max-width: 500px) {
+
+    header#header {
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-between;
+        font-size: .8em;
+    }
+
+    header#header div.left div.title {
+        display: block;
+    }
+
+}
+
+
 @keyframes appear {
 
     to {
