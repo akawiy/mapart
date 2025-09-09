@@ -22,7 +22,7 @@ export default function Header({}) {
             </div>
         </div>
         <nav id="nav">
-            {Object.keys(nav).map(route => <Link to={route} key={route} className={location.pathname === route ? "active" : ""}>{nav[route]}</Link>)}
+            {Object.keys(nav).map(route => <Link to={route} key={route} className={location.pathname === route ? "active" : ""} onClick={() => window.scrollTo({top: 0})}>{nav[route]}</Link>)}
         </nav>
     </header>
 
