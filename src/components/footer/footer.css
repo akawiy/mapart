@@ -1,0 +1,100 @@
+footer#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--bg) 50%, #000 50%);
+    padding: 20px;
+    color: color-mix(in srgb, var(--fg) 50%, transparent 50%);
+    font-size: 15px;
+    font-weight: 500;
+    gap: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+footer#footer div.info,
+footer#footer div.info > span,
+footer#footer div.info > a {
+    display: inline-flex;
+    gap: 7px;
+    align-items: center;
+    line-height: 1;
+}
+footer#footer div.info > span {
+    gap: 5px;
+}
+footer#footer div.info > a {
+    gap: 3px;
+}
+
+footer#footer div.info > a {
+    text-decoration: none;
+}
+
+footer#footer svg {
+    width: 20px;
+    height: 20px;
+}
+footer#footer img {
+    width: 23px;
+    height: 23px;
+}
+
+footer#footer svg.logo,
+footer#footer span.website-name {
+    color: var(--accent);
+}
+
+footer#footer span.author-name {
+    color: #ff843c;
+    text-decoration: none;
+}
+footer#footer span.author-name:hover {
+    text-decoration: underline;
+}
+
+footer#footer div.sep {
+    width: 90%;
+    height: 1px;
+    background-color: var(--bg2);
+}
+
+footer#footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+footer#footer a:hover {
+    text-decoration: none;
+    color: var(--link);
+}
+
+
+@media (max-width: 1000px) {
+
+    footer#footer {
+        font-size: 10px;
+    }
+
+    footer#footer div.info {
+        gap: 5px;
+    }
+
+    footer#footer svg {
+        width: 15px;
+        height: 15px;
+    }
+    footer#footer img {
+        width: 17px;
+        height: 17px;
+    }
+
+    footer#footer div.info > span {
+        gap: 3px;
+    }
+    footer#footer div.info > a {
+        gap: 2px;
+    }
+
+}

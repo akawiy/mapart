@@ -5,6 +5,7 @@ import MapSize from "./map_size/map_size";
 import ScalingMode from "./scaling_mode/scaling_mode";
 import StartingMapID from "./starting_map_id/starting_map_id";
 import Dithering from "./dithering/dithering";
+import Footer from "../../components/footer/footer";
 
 import "./convert.css";
 
@@ -45,6 +46,7 @@ export default function ConvertPage({}) {
                     setStartingMapID={v => setStartingMapID(v)} />
                 <Dithering {...{dithering}} 
                     setDithering={v => setDithering(v)} />
+                <Footer />
             </div>
         </div>
     );

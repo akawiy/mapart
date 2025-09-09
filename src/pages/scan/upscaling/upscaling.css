@@ -1,0 +1,21 @@
+section#upscaling div.options {
+    display: grid;
+    gap: .75em;
+}
+
+section#upscaling div.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5em;
+}
+
+section#upscaling div.option div.value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+section#upscaling div.option div.resolution {
+    color: var(--fg2);
+}

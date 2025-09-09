@@ -2,37 +2,11 @@ div#home-page {
     margin-top: 80px;
 }
 
-footer#footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: color-mix(in srgb, var(--bg) 50%, #000 50%);
-    padding: 1em;
-}
-
-footer#footer div.info {
-    color: color-mix(in srgb, var(--fg) 50%, transparent 50%);
-    font-size: .75em;
-    font-weight: 500;
-}
-
-footer#footer a {
-    color: inherit;
-}
-
-footer#footer a:hover {
-    text-decoration: underline;
-}
-
 
 @media (max-width: 1000px) {
 
     div#home-page {
         font-size: .75em;
-    }
-
-    footer#footer div.info {
-        font-size: .8em;
     }
 
 }

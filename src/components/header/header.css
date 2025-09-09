@@ -22,6 +22,7 @@ header#header div.left img {
     height: 2em;
     opacity: 0;
     animation: appear .5s ease-out forwards;
+    color: #fff;
 }
 
 header#header div.left div.title-wrapper {

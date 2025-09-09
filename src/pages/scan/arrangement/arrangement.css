@@ -12,10 +12,52 @@ section#arrangement div.grid input {
     text-align: center;
     font-size: calc(40vw / max(var(--width), var(--height)) / 3);
     overflow-x: hidden;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 section#arrangement div.grid input:focus {
     border: .1em solid var(--accent);
+}
+
+section#arrangement div.buttons {
+    display: flex;
+    gap: 1.5em;
+}
+
+section#arrangement div.buttons .button {
+    font-size: 20px;
+    background-color: var(--bg2);
+    padding: .5em;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: background-color .1s;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#arrangement div.buttons .button:disabled {
+    cursor: default;
+}
+section#arrangement div.buttons .button:hover:not(:disabled) {
+    background-color: var(--bg2-hover);
+    transition: background-color .1s;
+}
+section#arrangement div.buttons .button:active:not(:disabled) {
+    background-color: var(--bg2-active);
+    transition: background-color .1s;
+}
+
+section#arrangement div.buttons .button svg {
+    width: 100%;
+    height: 100%;
+}
+
+section#arrangement div.buttons .button svg path {
+    stroke: var(--fg);
+}
+section#arrangement div.buttons .button:disabled svg path {
+    stroke: var(--bg2-active);
 }
 
 
@@ -25,6 +67,14 @@ section#arrangement div.grid input:focus {
         width: calc(80vw / max(var(--width), var(--height)));
         height: calc(80vw / max(var(--width), var(--height)));
         font-size: calc(80vw / max(var(--width), var(--height)) / 3);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    section#arrangement div.buttons .button {
+        font-size: 15px;
     }
 
 }

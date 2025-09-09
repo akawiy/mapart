@@ -12,7 +12,7 @@ import "./map_view.css";
 window.Buffer = Buffer;
 
 
-export default function MapView({data, setData, mapSize, showGrid, arrangement}) {
+export default function MapView({data, setData, mapSize, showGrid, arrangement, upscaling}) {
 
     const canvasRef = useRef(null);
 
@@ -83,7 +83,7 @@ export default function MapView({data, setData, mapSize, showGrid, arrangement})
     }, [data, arrangement]);
 
 
-    const onUpload = async function(event) {
+    const upload = async function(event) {
         const newData = {};
 
         let colorPalette = Object.fromEntries((await parseCSV("/color_palettes/2724.csv"))
@@ -160,7 +160,17 @@ export default function MapView({data, setData, mapSize, showGrid, arrangement})
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const dataURL = canvas.toDataURL("image/png");
+        let currentCanvas = canvas;
+        if (upscaling > 1) {
+            currentCanvas = document.createElement("canvas");
+            currentCanvas.width = canvas.width * upscaling;
+            currentCanvas.height = canvas.height * upscaling;
+            const context = currentCanvas.getContext("2d");
+            context.imageSmoothingEnabled = false;
+            context.drawImage(canvas, 0, 0, currentCanvas.width, currentCanvas.height);
+        }
+
+        const dataURL = currentCanvas.toDataURL("image/png");
         const link = document.createElement("a");
         link.href = dataURL;
         link.download = "map.png";
@@ -172,7 +182,7 @@ export default function MapView({data, setData, mapSize, showGrid, arrangement})
 
     return (
         <div id="map-view">
-            <input type="file" id="maps-input" accept=".dat" multiple onChange={onUpload} />
+            <input type="file" id="maps-input" accept=".dat" multiple onChange={upload} />
             {Object.keys(data).length !== 0 && <div id="canvas-container">
                 <canvas id="image-canvas" ref={canvasRef}></canvas>
                 {showGrid && <div id="image-grid" style={{"--width": mapSize.width}}>

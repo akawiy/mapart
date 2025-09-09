@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 
 export default function NumberInput({value, setValue, minValue, maxValue, defaultValue, insertDefaultValue=true}) {
 
-    const [inputValue, setInputValue] = useState(insertDefaultValue ? value : "");
+    const [inputValue, setInputValue] = useState(insertDefaultValue ? defaultValue : "");
 
 
     useEffect(() => {
@@ -36,7 +36,7 @@ export default function NumberInput({value, setValue, minValue, maxValue, defaul
 
 
     return (
-        <input type="text" value={inputValue} placeholder={defaultValue} onChange={onChange} />
+        <input type="text" value={inputValue} placeholder={defaultValue} onChange={onChange} onClick={event => event.target.select()} />
     );
 
 }

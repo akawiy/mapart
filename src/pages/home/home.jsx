@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import Footer from "../../components/footer/footer";
 import ConvertSection from "./convert_section/convert_section";
 import ScanSection from "./scan_section/scan_section";
 
@@ -16,9 +17,7 @@ export default function HomePage({}) {
         <div id="home-page">
             <ConvertSection />
             <ScanSection />
-            <footer id="footer">
-                <div className="info">&copy; 2025 Mapart.fun</div>
-            </footer>
+            <Footer />
         </div>
     );
 
