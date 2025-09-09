@@ -177,7 +177,7 @@ div#image-view label.initial-upload:hover div.text {
 
     div#image-view {
         width: 100vw;
-        height: 40%;
+        height: 40vh;
         border-bottom: 3px solid var(--bg2);
         font-size: min(2.4vw, .96vh);
     }
