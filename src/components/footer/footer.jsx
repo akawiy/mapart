@@ -20,7 +20,7 @@ export default function Footer({}) {
             &copy; {yearRange} <span>
                 <Logo />
                 <span className="website-name">Mapart.fun</span>
-            </span> v1.3.0 by <a href="https://plschq.com" target="_blank">
+            </span> v1.3.1 by <a href="https://plschq.com" target="_blank">
                 <img src="https://www.plschq.com/favicon.svg" alt="" />
                 <span className="author-name">Vladimir Polischuk</span>
             </a>
