@@ -1,12 +1,6 @@
 # Mapart.fun
 
-[Mapart.fun](https://www.mapart.fun) is the ultimate tool for converting images into high-quality Minecraft Java Edition maps. With support for multiple Minecraft versions, map sizes up to 16×16, and powerful customization options like scaling modes and dithering, it gives you full creative control. Designed with a modern interface and a smooth user experience, Mapart.fun makes it effortless to transform your favorite images into stunning in-game artwork-bringing beauty and personality to your Minecraft world.
-
-# Timeline
-
-Developed on Vite/ReactJS since May 27th, 2025
-First release on June 15th, 2025
-Redesign on August 21st, 2025
+[Mapart.fun](https://mapart.fun) is the ultimate tool for converting images into high-quality Minecraft Java Edition maps. With support for multiple Minecraft versions, map sizes up to 16×16, and powerful customization options like scaling modes and dithering, it gives you full creative control. Designed with a modern interface and a smooth user experience, Mapart.fun makes it effortless to transform your favorite images into stunning in-game artwork-bringing beauty and personality to your Minecraft world.
 
 # Info
 
@@ -16,8 +10,3 @@ All processing runs on client side, no server needed. Required NodeJS libraries:
 - [pako](https://www.npmjs.com/package/pako) for gzipping
 - [buffer](https://www.npmjs.com/package/buffer) for compatibility
 - [heic2any](https://www.npmjs.com/package/heic2any) for Apple HEIC images support
-
-# Developers/Credits/Thanks
-
-- [Me](https://www.plschq.com)
-- [Floyd-Steinberg dithering](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering) article on [Wikipedia](https://www.wikipedia.org)
