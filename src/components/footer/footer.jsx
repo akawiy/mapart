@@ -1,5 +1,4 @@
 import Logo from "../../components/icons/logo";
-import a from "../../../../akawiy_com/public/favicon.svg";
 import {Link} from "react-router-dom";
 
 import "./footer.css";
@@ -22,8 +21,8 @@ export default function Footer({}) {
             &copy; {yearRange} <span>
                 <Logo />
                 <span className="website-name">Mapart</span>
-            </span> v1.3.1 by <a href="https://akawiy.com" target="_blank">
-                <img src={a} alt="Akawiy logo" />
+            </span> v1.3.2 by <a href="https://akawiy.com" target="_blank">
+                <img src="https://akawiy.com/favicon.svg" alt="Akawiy logo" />
                 <span className="author-name">Akawiy</span>
             </a>
         </div>
