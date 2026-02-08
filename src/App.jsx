@@ -9,6 +9,7 @@ import Header from "./components/header/header";
 import HomePage from "./pages/home/home";
 import ConvertPage from "./pages/convert/convert";
 import ScanPage from "./pages/scan/scan";
+import PrivacyPolicyPage from "./pages/privacy_policy/privacy_policy";
 
 import "./App.css";
 
@@ -28,6 +29,7 @@ export default function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/convert" element={<ConvertPage />} />
                     <Route path="/scan" element={<ScanPage />} />
+                    <Route path="/privacy" element={<PrivacyPolicyPage />} />
                 </Routes>
             </BrowserRouter>
             <Analytics />

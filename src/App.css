@@ -21,3 +21,12 @@ div#root {
     position: relative;
     font-size: 20px;
 }
+
+
+@media (max-width: 500px) {
+
+    div#root {
+        min-height: calc(100vh - 120px);
+    }
+    
+}

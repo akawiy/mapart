@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.mapart.fun/sitemap.xml
+Sitemap: https://mapart.fun/sitemap.xml

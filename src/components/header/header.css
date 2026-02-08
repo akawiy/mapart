@@ -6,7 +6,7 @@ header#header {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    background: #000;
+    background: hsl(240deg, 10%, 10%);
     padding: 1em;
     gap: 1em;
     z-index: 100;

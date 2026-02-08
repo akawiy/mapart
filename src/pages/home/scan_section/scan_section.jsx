@@ -16,7 +16,6 @@ export default function ScanSection({}) {
                     <Link to="/scan">
                         <button className="theme-button try-it-out">Scan <RightArrowIcon /></button>
                     </Link>
-                    <div className="new">New!</div>
                 </div>
             </div>
         </section>

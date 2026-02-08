@@ -1,4 +1,6 @@
 import Logo from "../../components/icons/logo";
+import a from "../../../../akawiy_com/public/favicon.svg";
+import {Link} from "react-router-dom";
 
 import "./footer.css";
 
@@ -16,19 +18,23 @@ export default function Footer({}) {
 
 
     return <footer id="footer">
-        <div className="info">
+        <div className="copyright">
             &copy; {yearRange} <span>
                 <Logo />
-                <span className="website-name">Mapart.fun</span>
-            </span> v1.3.1 by <a href="https://plschq.com" target="_blank">
-                <img src="https://www.plschq.com/favicon.svg" alt="" />
-                <span className="author-name">Vladimir Polischuk</span>
+                <span className="website-name">Mapart</span>
+            </span> v1.3.1 by <a href="https://akawiy.com" target="_blank">
+                <img src={a} alt="Akawiy logo" />
+                <span className="author-name">Akawiy</span>
             </a>
         </div>
-        <div className="sep"></div>
-        <div className="privacy">This website does not collect or store any personal information. All actions are performed directly in your browser, and any files you upload are never sent to an external server.</div>
-        <div className="sep"></div>
-        <div className="bugs">For questions, feedback, or bug reports, please contact <a href="mailto:vladimirp.main@gmail.com">vladimirp.main@gmail.com</a></div>
+        <div className="links">
+            <Link to="/">Home</Link>
+            <Link to="/convert">Convert</Link>
+            <Link to="/scan">Scan</Link>
+            <Link to="/privacy">Privacy</Link>
+            <a href="https://github.com/akawiy/mapart" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://akawiy.com/contact" target="_blank">Contact</a>
+        </div>
     </footer>
 
 }
