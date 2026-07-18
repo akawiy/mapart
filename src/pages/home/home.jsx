@@ -9,7 +9,7 @@ import "./home.css";
 export default function HomePage({}) {
 
     useEffect(() => {
-        document.title = `Mapart.fun - The Best Online Tool for Working with Minecraft Maps`;
+        document.title = `Mapart - The Best Online Tool for Working with Minecraft Maps`;
     }, []);
 
 
