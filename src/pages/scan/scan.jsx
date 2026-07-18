@@ -18,7 +18,7 @@ export default function ScanPage({}) {
 
 
     useEffect(() => {
-        document.title = `Minecraft Map Scanner \u2013 Mapart.fun`;
+        document.title = `Minecraft Map Scanner \u2013 Mapart`;
     }, []);
 
 
