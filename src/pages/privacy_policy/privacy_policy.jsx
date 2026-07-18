@@ -7,7 +7,7 @@ import "./privacy_policy.css";
 export default function PrivacyPolicyPage({}) {
 
     useEffect(() => {
-        document.title = `Privacy Policy - Mapart.fun`;
+        document.title = `Privacy Policy - Mapart`;
     }, []);
 
 
